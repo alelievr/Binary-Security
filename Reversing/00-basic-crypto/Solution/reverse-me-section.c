@@ -6,7 +6,7 @@
 /*   By: alelievr <alelievr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/01 03:03:46 by alelievr          #+#    #+#             */
-/*   Updated: 2017/04/11 20:36:37 by alelievr         ###   ########.fr       */
+/*   Updated: 2017/03/31 13:25:53 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,13 @@ typedef struct		s_crypt
 	int		key;
 }					t_crypt;
 
-static t_crypt		c __attribute__ ((section ("__text,__text"))) = {1546481215, 0x42};
+#if __APPLE__
+# define SECTION "__text,__text"
+#else
+# define SECTION "__text"
+#endif
+
+static t_crypt		c __attribute__ ((section (SECTION))) = {1546481215, 0x42};
 
 int		main(int ac, char **av)
 {

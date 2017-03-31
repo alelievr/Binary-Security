@@ -3,4 +3,4 @@ Find the parameter value to display "GGWP"
 This is a reverse Exercise so all available protections are activated (you cant exploit this binary to find the code).
 
 Compilation line:
-gcc -Weverything -Werror -arch `uname -m` -fstack-protector-all -Wstack-protector --param ssp-buffer-size=5 -Wl,-pie -fPIE -ftrapv -O2 reverse-me.c -m32 -o reverse-me
+gcc -Wall -Wextra -Wformat-security -Werror -fstack-protector-all -Wstack-protector --param ssp-buffer-size=5 -Wl,-pie -fPIE -ftrapv -O2 Solution/reverse-me-section.c -m32 -o reverse-me-`uname -m`_`uname -s`
