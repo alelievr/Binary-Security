@@ -4,3 +4,4 @@ This is a reverse Exercise so all available protections are activated (you cant 
 
 Compilation line:
 gcc -Wall -Wextra -Wformat-security -Werror -fstack-protector-all -Wstack-protector --param ssp-buffer-size=5 -Wl,-pie -fPIE -ftrapv -O2 Solution/reverse-me-section.c -m32 -o reverse-me-`uname -m`_`uname -s`
+strip reverse-me-`uname -m`_`uname -s`
