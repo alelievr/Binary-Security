@@ -2,7 +2,7 @@
 Find the parameter value to display "GGWP"
 
 ## About the binary
-they are all compiled in 32 bit. 
+they are all compiled in 32 bit and stripped.  
 This is a reverse Exercise so all available protections are activated (you cant exploit this binary to find the code).
 
 ## Compilation line
